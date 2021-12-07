@@ -14,7 +14,7 @@ public class UserService {
 	@Autowired
 	private  InternalUserRepository userRepository;
 	
-	public Iterable<InternalUser> getUserByUsername(String name) {
+	public InternalUser getUserByUsername(String name) {
 		return userRepository.findByUsername(name);
 	}
 	public List<InternalUser> getUsers() {

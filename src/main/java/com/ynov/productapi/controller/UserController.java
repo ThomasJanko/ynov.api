@@ -22,7 +22,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/user/{username}")
-	public Iterable<InternalUser> getUserByUsername(@PathVariable("username") String name) {
+	public InternalUser getUserByUsername(@PathVariable("username") String name) {
 		return userService.getUserByUsername(name);
 	}
 }
