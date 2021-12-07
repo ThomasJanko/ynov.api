@@ -8,24 +8,27 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class InternalUser {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer user_id;
-	private String name;
+	private String username;
 	private String password;
+	
+	
+	
 	public Integer getUser_id() {
 		return user_id;
 	}
 	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String name) {
+		this.username = name;
 	}
 	public String getPassword() {
 		return password;

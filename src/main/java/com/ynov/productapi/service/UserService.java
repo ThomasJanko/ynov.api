@@ -5,20 +5,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ynov.productapi.model.User;
-import com.ynov.productapi.repository.UserRepository;
+import com.ynov.productapi.model.InternalUser;
+import com.ynov.productapi.repository.InternalUserRepository;
 
 @Service
 public class UserService {
 	
 	@Autowired
-	private  UserRepository userRepository;
+	private  InternalUserRepository userRepository;
 	
-	public Iterable<User> getUserByName(String name) {
-		return userRepository.findByName(name);
+	public Iterable<InternalUser> getUserByUsername(String name) {
+		return userRepository.findByUsername(name);
 	}
-	public List<User> getUsers() {
-		return (List<User>) userRepository.findAll();
+	public List<InternalUser> getUsers() {
+		return (List<InternalUser>) userRepository.findAll();
 	}
 
 }

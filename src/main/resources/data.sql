@@ -52,11 +52,11 @@ INSERT INTO category_product (category_id, product_id) VALUES
 
 CREATE TABLE users(
 	user_id INT AUTO_INCREMENT PRIMARY KEY,
-	name VARCHAR(250) NOT NULL,
+	username VARCHAR(250) NOT NULL,
 	password VARCHAR(250) NOT NULL
 );
 
-INSERT INTO users(user_id, name, password) VALUES
+INSERT INTO users(user_id, username, password) VALUES
 
 (1,'Jean', '$2y$10$VOeixoLE.bsBNVS8JT7JzuQcTDgkj20Jm4RdRrcR4zEyREeMUnN2S'),
 (2, 'Paul', '$2y$10$8t.tFGgUmduQ3kwYdhU3G.i8clgt0EAdASQBxqMpUM7mad4Buma5O'),
